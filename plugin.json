@@ -1,0 +1,17 @@
+{
+  "name": "ponytail",
+  "displayName": "Ponytail",
+  "version": "5.3.3",
+  "description": "Lazy senior dev mode: the smallest change that fully solves the task, plus diff review, repo audit, and shortcut debt ledger.",
+  "author": {
+    "name": "Dietrich Gebert",
+    "url": "https://github.com/DietrichGebert"
+  },
+  "homepage": "https://github.com/jdsgnrinfo/ponytail-antigravity",
+  "repository": "https://github.com/jdsgnrinfo/ponytail-antigravity",
+  "suggestedPrompts": [
+    "Review my latest changes with ponytail-review",
+    "Audit this repo for bugs, risks, and bloat with ponytail-audit",
+    "List all deferred shortcuts in this repo with ponytail-debt"
+  ]
+}
