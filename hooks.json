@@ -1,0 +1,37 @@
+{
+  "ponytail": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File ./hooks/ponytail-session-start.ps1",
+        "timeout": 10
+      }
+    ],
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File ./hooks/ponytail-mode-tracker.ps1",
+        "timeout": 10
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File ./hooks/ponytail-band-track.ps1",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File ./hooks/ponytail-band-track.ps1",
+        "timeout": 10
+      }
+    ]
+  }
+}
